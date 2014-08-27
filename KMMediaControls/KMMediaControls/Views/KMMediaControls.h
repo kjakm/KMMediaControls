@@ -17,13 +17,14 @@ typedef enum : NSUInteger {
 @interface KMMediaControls : UIView <AVAudioPlayerDelegate>
 
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
-@property (strong, nonatomic) UILabel *currentTime;
-@property (strong, nonatomic) UILabel *endTime;
-@property (strong, nonatomic) UISlider *seekBar;
-@property (strong, nonatomic) UIButton *playButon;
-@property (strong, nonatomic) UIButton *stopButton;
-@property (assign, nonatomic) StopAudio stopAudio;
+@property (strong, nonatomic) UILabel       *currentTime;
+@property (strong, nonatomic) UILabel       *endTime;
+@property (strong, nonatomic) UISlider      *seekBar;
+@property (strong, nonatomic) UIButton      *playButon;
+@property (strong, nonatomic) UIButton      *stopButton;
+@property (assign, nonatomic) StopAudio     stopAudio;
+@property (assign, nonatomic) BOOL          autoplay;
 
-- (id)initWithFrame:(CGRect)frame audioFileURL:(NSURL *)fileURL;
+- (id)initWithFrame:(CGRect)frame audioFileURL:(NSURL *)fileURL autoplay:(BOOL)autoplay;
 
 @end
