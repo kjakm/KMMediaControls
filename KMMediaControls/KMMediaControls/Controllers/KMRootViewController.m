@@ -7,6 +7,7 @@
 //
 
 #import "KMRootViewController.h"
+#import "KMMediaControls.h"
 
 @interface KMRootViewController ()
 
@@ -16,7 +17,13 @@
 
 - (void)viewDidLoad
 {
-    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"audio" ofType:@"mp3"];
+    NSURL *fileURL = [NSURL fileURLWithPath:filePath];
+    KMMediaControls *mediaControls = [[KMMediaControls alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-120, self.view.frame.size.width, 120)
+                                                               audioFileURL:fileURL
+                                                                   autoplay:NO];
+    mediaControls.stopAudio = StopAudioReset;
+    [self.view addSubview:mediaControls];
 }
 
 @end
