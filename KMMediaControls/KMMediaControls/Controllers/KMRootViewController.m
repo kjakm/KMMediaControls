@@ -10,18 +10,13 @@
 
 @interface KMRootViewController ()
 
-@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
-
 @end
 
 @implementation KMRootViewController
 
 - (void)viewDidLoad
 {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"audio" ofType:@"mp3"];
-    NSURL *fileURL = [NSURL fileURLWithPath:filePath];
-    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
-    [_audioPlayer prepareToPlay];
+    
 }
 
 @end

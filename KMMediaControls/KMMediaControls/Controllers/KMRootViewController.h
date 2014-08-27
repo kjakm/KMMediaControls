@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
 
-@interface KMRootViewController : UIViewController <AVAudioPlayerDelegate>
+@interface KMRootViewController : UIViewController
 
 @end
