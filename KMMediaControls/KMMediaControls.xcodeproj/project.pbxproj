@@ -19,6 +19,9 @@
 		89D1DD3019AE7D8A004D8C04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D1DD1819AE7D8A004D8C04 /* UIKit.framework */; };
 		89D1DD3819AE7D8A004D8C04 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89D1DD3619AE7D8A004D8C04 /* InfoPlist.strings */; };
 		89D1DD3A19AE7D8A004D8C04 /* KMMediaControlsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D1DD3919AE7D8A004D8C04 /* KMMediaControlsTests.m */; };
+		89D1DD4519AE7E65004D8C04 /* KMRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D1DD4419AE7E65004D8C04 /* KMRootViewController.m */; };
+		89D1DD4819AE7ED8004D8C04 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D1DD4719AE7ED8004D8C04 /* AVFoundation.framework */; };
+		89D1DD4A19AE7FF9004D8C04 /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 89D1DD4919AE7FF9004D8C04 /* audio.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,10 @@
 		89D1DD3519AE7D8A004D8C04 /* KMMediaControlsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KMMediaControlsTests-Info.plist"; sourceTree = "<group>"; };
 		89D1DD3719AE7D8A004D8C04 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		89D1DD3919AE7D8A004D8C04 /* KMMediaControlsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMMediaControlsTests.m; sourceTree = "<group>"; };
+		89D1DD4319AE7E65004D8C04 /* KMRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KMRootViewController.h; path = Controllers/KMRootViewController.h; sourceTree = "<group>"; };
+		89D1DD4419AE7E65004D8C04 /* KMRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KMRootViewController.m; path = Controllers/KMRootViewController.m; sourceTree = "<group>"; };
+		89D1DD4719AE7ED8004D8C04 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		89D1DD4919AE7FF9004D8C04 /* audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D1DD4819AE7ED8004D8C04 /* AVFoundation.framework in Frameworks */,
 				89D1DD1719AE7D8A004D8C04 /* CoreGraphics.framework in Frameworks */,
 				89D1DD1919AE7D8A004D8C04 /* UIKit.framework in Frameworks */,
 				89D1DD1519AE7D8A004D8C04 /* Foundation.framework in Frameworks */,
@@ -96,6 +104,7 @@
 		89D1DD1319AE7D8A004D8C04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				89D1DD4719AE7ED8004D8C04 /* AVFoundation.framework */,
 				89D1DD1419AE7D8A004D8C04 /* Foundation.framework */,
 				89D1DD1619AE7D8A004D8C04 /* CoreGraphics.framework */,
 				89D1DD1819AE7D8A004D8C04 /* UIKit.framework */,
@@ -111,6 +120,7 @@
 				89D1DD2419AE7D8A004D8C04 /* KMAppDelegate.m */,
 				89D1DD2619AE7D8A004D8C04 /* Images.xcassets */,
 				89D1DD1B19AE7D8A004D8C04 /* Supporting Files */,
+				89D1DD4619AE7E69004D8C04 /* Controllers */,
 			);
 			path = KMMediaControls;
 			sourceTree = "<group>";
@@ -118,6 +128,7 @@
 		89D1DD1B19AE7D8A004D8C04 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				89D1DD4919AE7FF9004D8C04 /* audio.mp3 */,
 				89D1DD1C19AE7D8A004D8C04 /* KMMediaControls-Info.plist */,
 				89D1DD1D19AE7D8A004D8C04 /* InfoPlist.strings */,
 				89D1DD2019AE7D8A004D8C04 /* main.m */,
@@ -142,6 +153,15 @@
 				89D1DD3619AE7D8A004D8C04 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		89D1DD4619AE7E69004D8C04 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				89D1DD4319AE7E65004D8C04 /* KMRootViewController.h */,
+				89D1DD4419AE7E65004D8C04 /* KMRootViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89D1DD1F19AE7D8A004D8C04 /* InfoPlist.strings in Resources */,
+				89D1DD4A19AE7FF9004D8C04 /* audio.mp3 in Resources */,
 				89D1DD2719AE7D8A004D8C04 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D1DD4519AE7E65004D8C04 /* KMRootViewController.m in Sources */,
 				89D1DD2519AE7D8A004D8C04 /* KMAppDelegate.m in Sources */,
 				89D1DD2119AE7D8A004D8C04 /* main.m in Sources */,
 			);
