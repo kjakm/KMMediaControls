@@ -10,4 +10,10 @@
 
 @interface KMMediaControls : UIView
 
+@property (strong, nonatomic) UILabel *currentTime;
+@property (strong, nonatomic) UILabel *endTime;
+@property (strong, nonatomic) UISlider *seekBar;
+@property (strong, nonatomic) UIButton *playButon;
+@property (strong, nonatomic) UIButton *stopButton;
+
 @end
