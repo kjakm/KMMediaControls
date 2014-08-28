@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89B0FB1519AF4BCD000C13B8 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B0FB1419AF4BCD000C13B8 /* UIView+AutoLayout.m */; };
 		89D1DD1519AE7D8A004D8C04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D1DD1419AE7D8A004D8C04 /* Foundation.framework */; };
 		89D1DD1719AE7D8A004D8C04 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D1DD1619AE7D8A004D8C04 /* CoreGraphics.framework */; };
 		89D1DD1919AE7D8A004D8C04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D1DD1819AE7D8A004D8C04 /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89B0FB1319AF4BCD000C13B8 /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+AutoLayout.h"; path = "Utilities/UIView+AutoLayout.h"; sourceTree = "<group>"; };
+		89B0FB1419AF4BCD000C13B8 /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+AutoLayout.m"; path = "Utilities/UIView+AutoLayout.m"; sourceTree = "<group>"; };
 		89D1DD1119AE7D8A004D8C04 /* KMMediaControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMMediaControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D1DD1419AE7D8A004D8C04 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		89D1DD1619AE7D8A004D8C04 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -85,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89B0FB1219AF4BAB000C13B8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				89B0FB1319AF4BCD000C13B8 /* UIView+AutoLayout.h */,
+				89B0FB1419AF4BCD000C13B8 /* UIView+AutoLayout.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		89D1DD0819AE7D89004D8C04 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +135,7 @@
 				89D1DD2419AE7D8A004D8C04 /* KMAppDelegate.m */,
 				89D1DD2619AE7D8A004D8C04 /* Images.xcassets */,
 				89D1DD1B19AE7D8A004D8C04 /* Supporting Files */,
+				89B0FB1219AF4BAB000C13B8 /* Utilities */,
 				89D1DD4619AE7E69004D8C04 /* Controllers */,
 				89D1DD4E19AE84F9004D8C04 /* Views */,
 			);
@@ -274,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89B0FB1519AF4BCD000C13B8 /* UIView+AutoLayout.m in Sources */,
 				89D1DD4D19AE84F5004D8C04 /* KMMediaControls.m in Sources */,
 				89D1DD4519AE7E65004D8C04 /* KMRootViewController.m in Sources */,
 				89D1DD2519AE7D8A004D8C04 /* KMAppDelegate.m in Sources */,
@@ -474,6 +488,7 @@
 				89D1DD3F19AE7D8A004D8C04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89D1DD4019AE7D8A004D8C04 /* Build configuration list for PBXNativeTarget "KMMediaControlsTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +497,7 @@
 				89D1DD4219AE7D8A004D8C04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
