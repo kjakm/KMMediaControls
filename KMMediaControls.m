@@ -61,7 +61,11 @@
     _endTime.font = [UIFont fontWithName:@"HelveticaNeue" size:14];
     [self addSubview:_endTime];
 
-    // Autolayout
+    /*
+     *  Setup views using autolayout. Pin labels and status bar to the bottom of the view and
+     *  pin the play and stop buttons to the top of the view.
+     */
+    
     [self.currentTime pinAttribute:NSLayoutAttributeCenterY toAttribute:NSLayoutAttributeCenterY ofItem:self.seekBar];
     [self.currentTime pinToSuperviewEdges:JRTViewPinLeftEdge inset:10];
     [self.currentTime constrainToWidth:40];
@@ -104,6 +108,7 @@
     int min1= totalTime/60;
     int sec1= lroundf(totalTime) % 60;
     
+    // If seconds is under 10 put a zero before the second value
     NSString *secStr = [NSString stringWithFormat:@"%d", sec];
     if (secStr.length == 1) {
         secStr = [NSString stringWithFormat:@"0%d", sec];
@@ -136,6 +141,7 @@
     int min1= totalTime/60;
     int sec1= lroundf(totalTime) % 60;
     
+    // If seconds is under 10 put a zero before the second value
     NSString *secStr = [NSString stringWithFormat:@"%d", sec];
     if (secStr.length == 1) {
         secStr = [NSString stringWithFormat:@"0%d", sec];
@@ -165,6 +171,7 @@
     if ([self.audioPlayer isPlaying]) {
         if (self.stopAudio != StopAudioReset && self.stopAudio != StopAudioPause) {
             //If enum hasn't been set default to StopAudioPause
+            self.stopAudio = StopAudioPause;
             [self.audioPlayer pause];
         } else if (self.stopAudio == StopAudioReset) {
             [self.audioPlayer setCurrentTime:0.0];
