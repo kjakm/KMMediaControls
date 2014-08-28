@@ -13,7 +13,7 @@ To get started simply drag the KMMediaControls.m + .h files into your project an
 Check out the included sample project to see exactly how it works. 
 
 ### Setup Code
-```
+```objc
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"audio" ofType:@"mp3"];
     NSURL *fileURL = [NSURL fileURLWithPath:filePath];
     KMMediaControls *mediaControls = [[KMMediaControls alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-120, self.view.frame.size.width, 120)
