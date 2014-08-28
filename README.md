@@ -3,6 +3,8 @@ KMMediaControls
 
 KMMediaControls is a simple way to add standard UI controls to an audio player.
 
+To get started simply drag the KMMediaControls.m + .h files into your project and import it into your controller.
+
 - In your controller create an instand of KMMediaControls, pass it the URL of the file you want it to play (via AVAudioPlayer)
 , and add it to your view.
 - You will instantly get a view with play/pause buttons, a seek bar, and two labels showing the current playback time and the total time of the file.
