@@ -21,10 +21,10 @@
     [_audioPlayer prepareToPlay];
 
     // Setup buttons
-    _playButon = [[UIButton alloc] initWithFrame:CGRectMake(self.frame.size.width/2-37.5, 0, 75, 75)];
-    [_playButon addTarget:self action:@selector(playAudio:) forControlEvents:UIControlEventTouchUpInside];
-    [_playButon setImage:[UIImage imageNamed:@"PlayButton"] forState:UIControlStateNormal];
-    [self addSubview:_playButon];
+    _playButton = [[UIButton alloc] initWithFrame:CGRectMake(self.frame.size.width/2-37.5, 0, 75, 75)];
+    [_playButton addTarget:self action:@selector(playAudio:) forControlEvents:UIControlEventTouchUpInside];
+    [_playButton setImage:[UIImage imageNamed:@"PlayButton"] forState:UIControlStateNormal];
+    [self addSubview:_playButton];
     
     _stopButton = [[UIButton alloc] initWithFrame:CGRectMake(self.frame.size.width/2-37.5, 0, 75, 75)];
     [_stopButton addTarget:self action:@selector(stopAudio:) forControlEvents:UIControlEventTouchUpInside];
@@ -34,6 +34,10 @@
 
     // Setup seekbar
     _seekBar = [[UISlider alloc] initWithFrame:CGRectMake(45, self.frame.size.height-50, self.frame.size.width-90, 30)];
+    [_seekBar addTarget:self action:@selector(updateSlider:) forControlEvents:UIControlEventValueChanged];
+    _seekBar.minimumValue = 0.0;
+    _seekBar.maximumValue = _audioPlayer.duration;
+    _seekBar.value = 0.0;
     [self addSubview:_seekBar];
     
     // Setup labels
@@ -50,20 +54,57 @@
     [self addSubview:_endTime];
 
     if (self.autoplay == YES) {
-        self.playButon.hidden = YES;
+        self.playButton.hidden = YES;
         self.stopButton.hidden = NO;
         [self.audioPlayer play];
+        [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTime:) userInfo:nil repeats:YES];
     }
     
     return self;
 }
 
+- (void)updateTime:(NSTimer *)timer
+{
+    NSTimeInterval timePassed = self.audioPlayer.currentTime;
+    int min= timePassed/60;
+    int sec= lroundf(timePassed) % 60;
+    NSTimeInterval totalTime = self.audioPlayer.duration;
+    int min1= totalTime/60;
+    int sec1= lroundf(totalTime) % 60;
+    
+    self.currentTime.text = [NSString stringWithFormat:@"%d:%d", min, sec];
+    self.endTime.text = [NSString stringWithFormat:@"%d:%d", min1, sec1];
+    
+    self.seekBar.value = self.audioPlayer.currentTime;
+    if (self.audioPlayer.currentTime == self.audioPlayer.duration) {
+        self.playButton.hidden = NO;
+        self.stopButton.hidden = YES;
+        [timer invalidate];
+    }
+}
+
+- (void)updateSlider:(id)sender
+{
+    self.audioPlayer.currentTime = self.seekBar.value;
+    
+    NSTimeInterval timePassed = self.audioPlayer.currentTime;
+    int min= timePassed/60;
+    int sec= lroundf(timePassed) % 60;
+    NSTimeInterval totalTime = self.audioPlayer.duration;
+    int min1= totalTime/60;
+    int sec1= lroundf(totalTime) % 60;
+    
+    self.currentTime.text = [NSString stringWithFormat:@"%d:%d", min, sec];
+    self.endTime.text = [NSString stringWithFormat:@"%d:%d", min1, sec1];
+}
+
 - (void)playAudio:(id)sender
 {
     if (![self.audioPlayer isPlaying]) {
-        self.playButon.hidden = YES;
+        self.playButton.hidden = YES;
         self.stopButton.hidden = NO;
         [self.audioPlayer play];
+        [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTime:) userInfo:nil repeats:YES];
     }
 }
 
@@ -81,7 +122,7 @@
         }
         
         self.stopButton.hidden = YES;
-        self.playButon.hidden = NO;
+        self.playButton.hidden = NO;
     }
 }
 
