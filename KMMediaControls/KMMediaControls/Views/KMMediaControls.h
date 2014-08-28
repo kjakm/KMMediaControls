@@ -20,7 +20,7 @@ typedef enum : NSUInteger {
 @property (strong, nonatomic) UILabel       *currentTime;
 @property (strong, nonatomic) UILabel       *endTime;
 @property (strong, nonatomic) UISlider      *seekBar;
-@property (strong, nonatomic) UIButton      *playButon;
+@property (strong, nonatomic) UIButton      *playButton;
 @property (strong, nonatomic) UIButton      *stopButton;
 @property (assign, nonatomic) StopAudio     stopAudio;
 @property (assign, nonatomic) BOOL          autoplay;
