@@ -33,5 +33,6 @@ typedef enum : NSUInteger {
 @property (assign, nonatomic) BOOL          autoplay;
 
 - (id)initWithFrame:(CGRect)frame audioFileURL:(NSURL *)fileURL autoplay:(BOOL)autoplay;
+- (void)cleanUp;
 
 @end

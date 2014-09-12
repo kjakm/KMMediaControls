@@ -185,4 +185,9 @@
     }
 }
 
+- (void)cleanUp
+{
+    [self.audioPlayer stop];
+}
+
 @end
