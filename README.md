@@ -27,7 +27,7 @@ Check out the included sample project to see exactly how it works.
 
 ![Screenshot](https://github.com/kjakm/KMMediaControls/blob/master/KMMediaControls/Screenshot/screenshot.png)
 
-###License
+### License
 
 The MIT License
 
