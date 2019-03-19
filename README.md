@@ -25,4 +25,4 @@ Check out the included sample project to see exactly how it works.
 ```
 ### Screenshot
 
-![Screenshot](https://github.com/KieranMcGrady/KMMediaControls/blob/master/KMMediaControls/Screenshot/screenshot.png)
+![Screenshot](https://github.com/kjakm/KMMediaControls/blob/master/KMMediaControls/Screenshot/screenshot.png)
