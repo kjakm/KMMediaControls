@@ -238,6 +238,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Kieran McGrady";
 				TargetAttributes = {
+					89D1DD1019AE7D89004D8C04 = {
+						DevelopmentTeam = 2S89G6V9H5;
+					};
 					89D1DD2B19AE7D8A004D8C04 = {
 						TestTargetID = 89D1DD1019AE7D89004D8C04;
 					};
@@ -408,6 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 2S89G6V9H5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KMMediaControls/KMMediaControls-Prefix.pch";
 				INFOPLIST_FILE = "KMMediaControls/KMMediaControls-Info.plist";
@@ -421,6 +425,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 2S89G6V9H5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KMMediaControls/KMMediaControls-Prefix.pch";
 				INFOPLIST_FILE = "KMMediaControls/KMMediaControls-Info.plist";
